@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "176971316006",
+    "project_id": "warehouse-management-too-c92ba",
+    "storage_bucket": "warehouse-management-too-c92ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176971316006:android:09b3ac1da095a6de909fe7",
+        "android_client_info": {
+          "package_name": "com.example.wmt_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlYM9Qf_Ab7TIaW1qglX6wWYtXvDihYx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
