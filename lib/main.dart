@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'package:wmt_test/Crud/Data.dart';
+import 'Crud/Information.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -9,8 +9,12 @@ Future<void> main() async {
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-
   );
+
+  // addDataToUserCollection();
+  // createUser("Username", "Password", "Department");
+  // getAllData('Application');
+  getInformation('Brand', '1');
   runApp(const MyApp());
 }
 
@@ -41,8 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Call the function here with your desired collection name and document ID
-    getAllFieldsAndPerformAction('Application', '1');
   }
 
   @override
@@ -61,22 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-void getAllFieldsAndPerformAction(String collectionName, String documentId) async {
-  try {
-    DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance.collection(collectionName).doc(documentId).get();
 
-    if (documentSnapshot.exists) {
-      Map<String, dynamic> data = documentSnapshot.data() as Map<String, dynamic>;
-      // Perform action with the retrieved data
-      print('Document fields:');
-      data.forEach((key, value) {
-        print('$key: $value');
-      });
-    } else {
-      print('Document does not exist: $documentId');
-    }
-  } catch (e) {
-    print('Error retrieving document: $e');
-  }
-}
+
+
+
+
+
 
